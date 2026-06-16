@@ -130,7 +130,7 @@
                 ["First Key Priority", 3],
                 ["Second Key Priority", 4]
               ],
-              "content": ["id_socd_pair_1_mode", 0, 12]
+              "content": ["id_socd_pair_1_mode", 0, 13]
             },
             {
               "showIf": "{id_socd_pair_1_mode} != 0",
@@ -138,12 +138,12 @@
                 {
                   "label": "Pair #1 First Key",
                   "type": "keycode",
-                  "content": ["id_socd_pair_1_key_1", 0, 13]
+                  "content": ["id_socd_pair_1_key_1", 0, 14]
                 },
                 {
                   "label": "Pair #1 Second Key",
                   "type": "keycode",
-                  "content": ["id_socd_pair_1_key_2", 0, 14]
+                  "content": ["id_socd_pair_1_key_2", 0, 15]
                 }
               ]
             },
@@ -157,7 +157,7 @@
                 ["First Key Priority", 3],
                 ["Second Key Priority", 4]
               ],
-              "content": ["id_socd_pair_2_mode", 0, 15]
+              "content": ["id_socd_pair_2_mode", 0, 16]
             },
             {
               "showIf": "{id_socd_pair_2_mode} != 0",
@@ -165,12 +165,12 @@
                 {
                   "label": "Pair #2 First Key",
                   "type": "keycode",
-                  "content": ["id_socd_pair_2_key_1", 0, 16]
+                  "content": ["id_socd_pair_2_key_1", 0, 17]
                 },
                 {
                   "label": "Pair #2 Second Key",
                   "type": "keycode",
-                  "content": ["id_socd_pair_2_key_2", 0, 17]
+                  "content": ["id_socd_pair_2_key_2", 0, 18]
                 }
               ]
             },
@@ -184,7 +184,7 @@
                 ["First Key Priority", 3],
                 ["Second Key Priority", 4]
               ],
-              "content": ["id_socd_pair_3_mode", 0, 18]
+              "content": ["id_socd_pair_3_mode", 0, 19]
             },
             {
               "showIf": "{id_socd_pair_3_mode} != 0",
@@ -192,12 +192,12 @@
                 {
                   "label": "Pair #3 First Key",
                   "type": "keycode",
-                  "content": ["id_socd_pair_3_key_1", 0, 19]
+                  "content": ["id_socd_pair_3_key_1", 0, 20]
                 },
                 {
                   "label": "Pair #3 Second Key",
                   "type": "keycode",
-                  "content": ["id_socd_pair_3_key_2", 0, 20]
+                  "content": ["id_socd_pair_3_key_2", 0, 21]
                 }
               ]
             },
@@ -211,7 +211,7 @@
                 ["First Key Priority", 3],
                 ["Second Key Priority", 4]
               ],
-              "content": ["id_socd_pair_4_mode", 0, 21]
+              "content": ["id_socd_pair_4_mode", 0, 22]
             },
             {
               "showIf": "{id_socd_pair_4_mode} != 0",
@@ -219,14 +219,37 @@
                 {
                   "label": "Pair #4 First Key",
                   "type": "keycode",
-                  "content": ["id_socd_pair_4_key_1", 0, 22]
+                  "content": ["id_socd_pair_4_key_1", 0, 23]
                 },
                 {
                   "label": "Pair #4 Second Key",
                   "type": "keycode",
-                  "content": ["id_socd_pair_4_key_2", 0, 23]
+                  "content": ["id_socd_pair_4_key_2", 0, 24]
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "showIf": "{id_firmware_version} >= 2",
+      "label": "Board System",
+      "content": [
+        {
+          "label": "Board Maintenance",
+          "content": [
+            {
+              "label": "Flash Mode",
+              "type": "button",
+              "options": [0],
+              "content": ["id_flash_mode", 0, 24]
+            },
+            {
+              "label": "FACTORY RESET (Unplug the board and plug it back in to complete the procedure)",
+              "type": "button",
+              "options": [0],
+              "content": ["id_factory_reset", 0, 25]
             }
           ]
         }
