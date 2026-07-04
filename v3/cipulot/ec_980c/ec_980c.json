@@ -223,12 +223,14 @@
               "content": ["id_bottoming_calibration", 0, 20]
             },
             {
+              "showIf": "{id_bottoming_calibration} == 0",
               "label": "Show Board Calibration Data",
               "type": "button",
               "options": [0],
               "content": ["id_show_calibration_data", 0, 22]
             },
             {
+              "showIf": "{id_bottoming_calibration} == 0",
               "label": "Clear Board Calibration Data",
               "type": "button",
               "options": [0],
