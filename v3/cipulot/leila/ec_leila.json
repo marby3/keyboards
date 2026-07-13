@@ -177,7 +177,7 @@
                   "content": ["id_apc_actuation_threshold", 0, 14]
                 },
                 {
-                  "label": "Release Level",
+                  "label": "Release Level (0% | 100%)",
                   "type": "range",
                   "options": [1, 1023],
                   "constraints": [
