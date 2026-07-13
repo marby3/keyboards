@@ -225,12 +225,28 @@
                   "label": "Actuation Level (0% | 100%)",
                   "type": "range",
                   "options": [1, 1023],
+                  "constraints": [
+                    {
+                      "operator": ">=",
+                      "reference": "id_apc_release_threshold",
+                      "offset": 50,
+                      "onViolation": "push"
+                    }
+                  ],
                   "content": ["id_apc_actuation_threshold", 0, 17]
                 },
                 {
                   "label": "Release Level (0% | 100%, ALWAYS < Actuation Level)",
                   "type": "range",
                   "options": [1, 1023],
+                  "constraints": [
+                    {
+                      "operator": "<=",
+                      "reference": "id_apc_actuation_threshold",
+                      "offset": -50,
+                      "onViolation": "push"
+                    }
+                  ],
                   "content": ["id_apc_release_threshold", 0, 18]
                 },
                 {
