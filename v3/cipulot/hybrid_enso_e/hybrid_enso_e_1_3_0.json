@@ -1200,104 +1200,13 @@
               "label": "Right Spacebar 1 Key Switch Type",
               "type": "dropdown",
               "options": ["EC", "MX"],
-              "content": ["id_switch_type_key_9", 0, 57]
-            },
-            {
-              "showIf": "{id_switch_type_key_9} == 0",
-              "content": [
-                {
-                  "label": "Right Spacebar 1 Key Mode",
-                  "type": "dropdown",
-                  "options": ["APC", "Rapid Trigger"],
-                  "content": ["id_actuation_mode_key_9", 0, 58]
-                }
-              ]
-            },
-            {
-              "showIf": "{id_switch_type_key_9} == 0 && {id_actuation_mode_key_9} == 0",
-              "content": [
-                {
-                  "label": "Actuation threshold (1-1023)",
-                  "type": "range",
-                  "options": [1, 1023],
-                  "constraints": [
-                    {
-                      "operator": ">=",
-                      "reference": "id_apc_release_threshold_key_9",
-                      "offset": 50,
-                      "onViolation": "push"
-                    }
-                  ],
-                  "content": ["id_apc_actuation_threshold_key_9", 0, 59]
-                },
-                {
-                  "label": "Release threshold (1-1023)",
-                  "type": "range",
-                  "options": [1, 1023],
-                  "constraints": [
-                    {
-                      "operator": "<=",
-                      "reference": "id_apc_actuation_threshold_key_9",
-                      "offset": -50,
-                      "onViolation": "push"
-                    }
-                  ],
-                  "content": ["id_apc_release_threshold_key_9", 0, 60]
-                },
-                {
-                  "label": "Apply & save changes",
-                  "type": "button",
-                  "options": [0],
-                  "content": ["id_save_threshold_data", 0, 88]
-                }
-              ]
-            },
-            {
-              "showIf": "{id_switch_type_key_9} == 0 && {id_actuation_mode_key_9} == 1",
-              "content": [
-                {
-                  "label": "Initial deadzone offset (1-1023)",
-                  "type": "range",
-                  "options": [1, 1023],
-                  "content": ["id_rt_initial_deadzone_offset_key_9", 0, 61]
-                },
-                {
-                  "label": "Actuation offset (1-255)",
-                  "type": "range",
-                  "options": [1, 255],
-                  "content": ["id_rt_actuation_offset_key_9", 0, 62]
-                },
-                {
-                  "label": "Release offset (1-255)",
-                  "type": "range",
-                  "options": [1, 255],
-                  "content": ["id_rt_release_offset_key_9", 0, 63]
-                },
-                {
-                  "label": "Apply & save changes",
-                  "type": "button",
-                  "options": [1],
-                  "content": ["id_save_threshold_data", 0, 88]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "showIf": "{id_board_mode} == 2",
-          "label": "Right Spacebar 2 Key",
-          "content": [
-            {
-              "label": "Right Spacebar 2 Key Switch Type",
-              "type": "dropdown",
-              "options": ["EC", "MX"],
               "content": ["id_switch_type_key_10", 0, 64]
             },
             {
               "showIf": "{id_switch_type_key_10} == 0",
               "content": [
                 {
-                  "label": "Right Spacebar 2 Key Mode",
+                  "label": "Right Spacebar 1 Key Mode",
                   "type": "dropdown",
                   "options": ["APC", "Rapid Trigger"],
                   "content": ["id_actuation_mode_key_10", 0, 65]
@@ -1363,6 +1272,97 @@
                   "type": "range",
                   "options": [1, 255],
                   "content": ["id_rt_release_offset_key_10", 0, 70]
+                },
+                {
+                  "label": "Apply & save changes",
+                  "type": "button",
+                  "options": [1],
+                  "content": ["id_save_threshold_data", 0, 88]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "showIf": "{id_board_mode} == 2",
+          "label": "Right Spacebar 2 Key",
+          "content": [
+            {
+              "label": "Right Spacebar 2 Key Switch Type",
+              "type": "dropdown",
+              "options": ["EC", "MX"],
+              "content": ["id_switch_type_key_9", 0, 57]
+            },
+            {
+              "showIf": "{id_switch_type_key_9} == 0",
+              "content": [
+                {
+                  "label": "Right Spacebar 2 Key Mode",
+                  "type": "dropdown",
+                  "options": ["APC", "Rapid Trigger"],
+                  "content": ["id_actuation_mode_key_9", 0, 58]
+                }
+              ]
+            },
+            {
+              "showIf": "{id_switch_type_key_9} == 0 && {id_actuation_mode_key_9} == 0",
+              "content": [
+                {
+                  "label": "Actuation threshold (1-1023)",
+                  "type": "range",
+                  "options": [1, 1023],
+                  "constraints": [
+                    {
+                      "operator": ">=",
+                      "reference": "id_apc_release_threshold_key_9",
+                      "offset": 50,
+                      "onViolation": "push"
+                    }
+                  ],
+                  "content": ["id_apc_actuation_threshold_key_9", 0, 59]
+                },
+                {
+                  "label": "Release threshold (1-1023)",
+                  "type": "range",
+                  "options": [1, 1023],
+                  "constraints": [
+                    {
+                      "operator": "<=",
+                      "reference": "id_apc_actuation_threshold_key_9",
+                      "offset": -50,
+                      "onViolation": "push"
+                    }
+                  ],
+                  "content": ["id_apc_release_threshold_key_9", 0, 60]
+                },
+                {
+                  "label": "Apply & save changes",
+                  "type": "button",
+                  "options": [0],
+                  "content": ["id_save_threshold_data", 0, 88]
+                }
+              ]
+            },
+            {
+              "showIf": "{id_switch_type_key_9} == 0 && {id_actuation_mode_key_9} == 1",
+              "content": [
+                {
+                  "label": "Initial deadzone offset (1-1023)",
+                  "type": "range",
+                  "options": [1, 1023],
+                  "content": ["id_rt_initial_deadzone_offset_key_9", 0, 61]
+                },
+                {
+                  "label": "Actuation offset (1-255)",
+                  "type": "range",
+                  "options": [1, 255],
+                  "content": ["id_rt_actuation_offset_key_9", 0, 62]
+                },
+                {
+                  "label": "Release offset (1-255)",
+                  "type": "range",
+                  "options": [1, 255],
+                  "content": ["id_rt_release_offset_key_9", 0, 63]
                 },
                 {
                   "label": "Apply & save changes",
